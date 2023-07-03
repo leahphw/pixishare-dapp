@@ -7,8 +7,19 @@ import Navbar from './Navbar'
 import Main from './Main'
 
 // Declare IPFS
-const ipfsClient = require('ipfs-http-client')
-const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
+const ipfsClient = require('ipfs-http-client');
+const projectId = "2S3D7FiQmglBjTsNV6MsQfxnTzo";
+const projectSecret = "5c42db573664918910202560ae3cc741";
+const auth =
+  'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+const ipfs = ipfsClient.create({
+  host: 'ipfs.infura.io',
+  port: 5001,
+  protocol: 'https',
+  headers: {
+    authorization: auth,
+  },
+});
 
 class App extends Component {
 
@@ -42,8 +53,21 @@ class App extends Component {
     if (networkData) {
       const decentragram = web3.eth.Contract(Decentragram.abi, networkData.address)
       this.setState({ decentragram: decentragram })
-      const postCount = await decentragram.methods.postCount().call()
+      const postCount = await decentragram.methods.postCount.call()
       this.setState({ postCount })
+
+      // Load images
+      for (var i = 1; i <= postCount; i++) {
+        const post = await decentragram.methods.posts(i).call()
+        this.setState({
+          posts: [...this.state.posts, post]
+        })
+      }
+      
+      // Sort posts. Show highest tipped images first
+      this.setState({
+        posts: this.state.posts.sort((a,b) => b.tipAmount - a.tipAmount )
+      })
       this.setState({ loading: false })
     }
     else {
@@ -63,31 +87,33 @@ class App extends Component {
     }
   }
 
-  upload = description => {
-    console.log("sending files to ipfs...")
+upload = async (description) => {
+  console.log("sending files to IPFS...");
 
-    // Add file to IPFS
-    ipfs.add(this.state.buffer, (error, result) => {
-      console.log('ipfs result', result)
-      if (error) {
-        console.error(error)
-        return
-      }
+  try {
+    const result = await ipfs.add(this.state.buffer);
+    console.log("IPFS result:", result);
 
-      this.setState({ loading: true })
-      this.state.decentragram.methods.upload(result[0].hash, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
-        this.setState({ loading: false })
-      })
-    })
+    this.setState({ loading: true });
+
+    await this.state.decentragram.methods
+      .upload(result.path, description)
+      .send({ from: this.state.account })
+      .on('transactionHash', (hash) => {
+        console.log("Upload transaction hash:", hash);
+        this.setState({ loading: false });
+      });
+  } catch (error) {
+    console.error("IPFS upload error:", error);
   }
-
-  tipUser(id, tipAmount) {
+};
+  
+   tipUser(id, tipAmount) {
     this.setState({ loading: true })
     this.state.decentragram.methods.tipUser(id).send({ from: this.state.account, value: tipAmount }).on('transactionHash', (hash) => {
       this.setState({ loading: false })
     })
   }
-
 
   constructor(props) {
     super(props)
@@ -112,7 +138,6 @@ class App extends Component {
             tipUser={this.tipUser}
           />
         }
-
       </div>
     );
   }
