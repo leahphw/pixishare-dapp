@@ -29,14 +29,32 @@ class App extends Component {
 
   async loadBlockchainData() {
     const web3 = window.web3
-    const accounts = web3.eth.getAccounts()
-    this.setState( { account: accounts[0] })
+    const accounts = await web3.eth.getAccounts()
+    console.log(accounts[0])
+    this.setState( { account: accounts[0] } )
+
+    const networkId = await web3.eth.net.getId()
+    const networkData = Decentragram.networks[networkId]
+
+    if (networkData) {
+      const decentragram = web3.eth.Contract(Decentragram.abi, networkData.address)
+      this.setState({ decentragram: decentragram })
+      const postCount = await decentragram.methods.postCount().call()
+      this.setState({ postCount })
+      this.setState({ loading: false })
+    } 
+    else {
+      window.alert("Decentragram contract not deployed to the detected network.")
+    }
   }
 
   constructor(props) {
     super(props)
     this.state = {
       account: '',
+      decentragram: null,
+      posts: [],
+      loading: true
     }
   }
 
