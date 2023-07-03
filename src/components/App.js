@@ -3,8 +3,8 @@ import Web3 from 'web3';
 import Identicon from 'identicon.js';
 import './App.css';
 import Decentragram from '../abis/Decentragram.json'
-import Navbar from './Navbar'
-import Main from './Main'
+import Navbar from './Navbar.js'
+import Main from './Main.js'
 
 // Declare IPFS
 const ipfsClient = require('ipfs-http-client');
@@ -42,18 +42,18 @@ class App extends Component {
   }
 
   async loadBlockchainData() {
-    const web3 = window.web3
-    const accounts = await web3.eth.getAccounts()
-    console.log(accounts[0])
-    this.setState({ account: accounts[0] })
-
-    const networkId = await web3.eth.net.getId()
-    const networkData = Decentragram.networks[networkId]
-
+    const web3 = window.web3;
+    const accounts = await web3.eth.getAccounts();
+    this.setState({ account: accounts[0] });
+  
+    const networkId = await web3.eth.net.getId();
+    const networkData = Decentragram.networks[networkId];
+  
     if (networkData) {
-      const decentragram = web3.eth.Contract(Decentragram.abi, networkData.address)
-      this.setState({ decentragram: decentragram })
-      const postCount = await decentragram.methods.postCount.call()
+      const decentragram = new web3.eth.Contract(Decentragram.abi, networkData.address);
+      this.setState({ decentragram });
+  
+      const postCount = await decentragram.methods.postCount().call()
       this.setState({ postCount })
 
       // Load images
@@ -63,15 +63,14 @@ class App extends Component {
           posts: [...this.state.posts, post]
         })
       }
-      
+  
       // Sort posts. Show highest tipped images first
       this.setState({
         posts: this.state.posts.sort((a,b) => b.tipAmount - a.tipAmount )
       })
       this.setState({ loading: false })
-    }
-    else {
-      window.alert("Decentragram contract not deployed to the detected network.")
+    } else {
+      window.alert("Decentragram contract not deployed to the detected network.");
     }
   }
 
@@ -87,32 +86,36 @@ class App extends Component {
     }
   }
 
-upload = async (description) => {
-  console.log("sending files to IPFS...");
+  upload = async (description) => {
+    console.log("sending files to IPFS...");
 
-  try {
-    const result = await ipfs.add(this.state.buffer);
-    console.log("IPFS result:", result);
+    try {
+      const result = await ipfs.add(this.state.buffer);
+      console.log("IPFS result:", result);
 
+      this.setState({ loading: true });
+
+      await this.state.decentragram.methods
+        .upload(result.path, description)
+        .send({ from: this.state.account })
+        .on('transactionHash', (hash) => {
+          console.log("Upload transaction hash:", hash);
+          this.setState({ loading: false });
+        });
+    } catch (error) {
+      console.error("IPFS upload error:", error);
+    }
+  };
+
+  tipUser = async (id, tipAmount) => {
     this.setState({ loading: true });
 
-    await this.state.decentragram.methods
-      .upload(result.path, description)
-      .send({ from: this.state.account })
-      .on('transactionHash', (hash) => {
-        console.log("Upload transaction hash:", hash);
-        this.setState({ loading: false });
-      });
-  } catch (error) {
-    console.error("IPFS upload error:", error);
-  }
-};
-  
-   tipUser(id, tipAmount) {
-    this.setState({ loading: true })
-    this.state.decentragram.methods.tipUser(id).send({ from: this.state.account, value: tipAmount }).on('transactionHash', (hash) => {
+    this.state.decentragram.methods
+    .tipUser(id)
+    .send({ from: this.state.account, value: tipAmount })
+    .on('transactionHash', (hash) => {
       this.setState({ loading: false })
-    })
+    });
   }
 
   constructor(props) {
@@ -129,15 +132,18 @@ upload = async (description) => {
     return (
       <div>
         <Navbar account={this.state.account} />
-        {this.state.loading
-          ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
-          : <Main
+        {this.state.loading ? (
+          <div id="loader" className="text-center mt-5">
+            <p>Loading...</p>
+          </div>
+        ) : (
+          <Main
             posts={this.state.posts}
             captureFile={this.captureFile}
             upload={this.upload}
             tipUser={this.tipUser}
           />
-        }
+        )}
       </div>
     );
   }

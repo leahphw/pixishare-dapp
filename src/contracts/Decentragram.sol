@@ -12,7 +12,7 @@ contract Decentragram {
     address payable author;
   }
 
-  event PostCreated(
+  event PostUploaded(
     uint id,
     string hash,
     string description,
@@ -43,7 +43,7 @@ contract Decentragram {
     posts[postCount] = Post(postCount, _postHash, _description, 0, msg.sender);
 
     // Trigger an event
-    emit PostCreated(postCount, _postHash, _description, 0, msg.sender);
+    emit PostUploaded(postCount, _postHash, _description, 0, msg.sender);
   }
 
   // Tip posts
@@ -65,6 +65,6 @@ contract Decentragram {
     posts[_id] = _post;
 
     // Trigger an event
-    emit PostCreated(_id, _post.hash, _post.description, _post.tipAmount, _author);
+    emit PostTipped(_id, _post.hash, _post.description, _post.tipAmount, _author);
   }
 }
