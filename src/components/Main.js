@@ -30,9 +30,7 @@ class Main extends Component {
                 <button type="submit" class="btn btn-primary btn-block btn-lg">Upload!</button>
               </form>
               <p>&nbsp;</p>
-
-              {/* Code ... */}
-
+              
             </div>
           </main>
         </div>
