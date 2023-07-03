@@ -1,3 +1,7 @@
+* {
+    font-family:monospace
+}
+
 /* Custom CSS for Main Component */
 .container-fluid {
     margin-top: 60px;
@@ -10,29 +14,29 @@
   }
   
   .upload-container {
-    flex: 0 0 100%; /* Share box takes full width by default */
+    flex: 0 0 100%; 
     margin-bottom: 20px;
   }
   
   .feed-container {
-    flex: 0 0 100%; /* Feed takes full width by default */
+    flex: 0 0 100%; 
   }
   
   @media (min-width: 768px) {
     .upload-container {
-      flex: 0 0 40%; /* Share box takes 40% width on larger screens */
+      flex: 0 0 40%; 
       margin-right: 20px;
       margin-bottom: 0;
     }
   
     .feed-container {
-      flex: 1; /* Feed takes remaining width on larger screens */
+      flex: 1; 
     }
   }
   
   
   h2 {
-    color: #D35400; /* Pumpkin Orange text color */
+    color: #8B2635; 
     font-size: 1.8rem;
     margin-bottom: 20px;
   }
@@ -42,7 +46,7 @@
   }
   
   .card {
-    background-color: #FFFFFF; /* White background color */
+    background-color: #FFFFFF; 
     margin-bottom: 20px;
     border-radius: 10px;
     border: none;
@@ -50,7 +54,7 @@
   }
   
   .card-header {
-    background-color: #FDF4E9; /* Subtle bright card header background color */
+    background-color: #D0D6B5; 
     padding: 10px 20px;
     border-bottom: none;
     border-radius: 10px 10px 0 0;
@@ -62,7 +66,7 @@
   }
   
   .text-muted {
-    color: #888888; /* Gray text color */
+    color: #888888; 
   }
   
   #imageList .list-group-item {
@@ -75,41 +79,39 @@
   }
   
   .float-left {
-    color: #888888; /* Gray text color */
+    color: #888888; 
   }
   
   .btn-link {
-    color: #FF6B6B; /* Coral color */
+    color: #D0D6B5; 
     transition: all 0.3s ease;
   }
   
   .btn-link:hover {
-    color: #E71D36; /* Bright Red color */
+    color: #8B2635;
     text-decoration: underline;
   }
   
   .btn-primary {
-    background-color: #FF9F1C; /* Bright Orange color */
-    border-color: #FF9F1C;
-    color: #FFFFFF; /* White text color */
+    background-color: #EE7674; 
+    border-color: #EE7674;
+    color: #FFFFFF; 
     transition: all 0.3s ease;
   }
   
   .btn-primary:hover {
-    background-color: #FF691F; /* Brighter Orange color */
-    border-color: #FF691F;
-    color: #FFFFFF; /* White text color */
+    background-color: #8B2635;
+    border-color: #8B2635;
+    color: #FFFFFF; 
   }
   
-  /* Integrated Navbar CSS Styles */
+  /* Navbar CSS Styles */
   .navbar {
-    background-color: #FF9F1C; /* Bright Orange color */
-    padding: 10px;
+    background-color: #EE7674; 
   }
   
   .navbar-brand {
-    color: #FFFFFF; /* White text color */
-    font-size: 1.2rem;
+    color: #FFFFFF; 
   }
   
   .navbar-brand img {
@@ -122,7 +124,7 @@
   }
   
   #account {
-    color: #FFFFFF; /* White text color */
+    color: #FFFFFF; 
   }
   
   .identicon-img {

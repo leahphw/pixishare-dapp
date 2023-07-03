@@ -1,5 +1,5 @@
-const Decentragram = artifacts.require("Decentragram");
+const PixiShare = artifacts.require("PixiShare");
 
 module.exports = function(deployer) {
-  deployer.deploy(Decentragram);
+  deployer.deploy(PixiShare);
 };

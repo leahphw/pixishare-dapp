@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Web3 from 'web3';
 import Identicon from 'identicon.js';
 import './App.css';
-import Decentragram from '../abis/Decentragram.json'
+import PixiShare from '../abis/PixiShare.json'
 import Navbar from './Navbar.js'
 import Main from './Main.js'
 
@@ -47,18 +47,18 @@ class App extends Component {
     this.setState({ account: accounts[0] });
   
     const networkId = await web3.eth.net.getId();
-    const networkData = Decentragram.networks[networkId];
+    const networkData = PixiShare.networks[networkId];
   
     if (networkData) {
-      const decentragram = new web3.eth.Contract(Decentragram.abi, networkData.address);
-      this.setState({ decentragram });
+      const pixishare = new web3.eth.Contract(PixiShare.abi, networkData.address);
+      this.setState({ pixishare });
   
-      const postCount = await decentragram.methods.postCount().call()
+      const postCount = await pixishare.methods.postCount().call()
       this.setState({ postCount })
 
       // Load images
       for (var i = 1; i <= postCount; i++) {
-        const post = await decentragram.methods.posts(i).call()
+        const post = await pixishare.methods.posts(i).call()
         this.setState({
           posts: [...this.state.posts, post]
         })
@@ -70,7 +70,7 @@ class App extends Component {
       })
       this.setState({ loading: false })
     } else {
-      window.alert("Decentragram contract not deployed to the detected network.");
+      window.alert("PixiShare contract not deployed to the detected network.");
     }
   }
 
@@ -95,7 +95,7 @@ class App extends Component {
 
       this.setState({ loading: true });
 
-      await this.state.decentragram.methods
+      await this.state.pixishare.methods
         .upload(result.path, description)
         .send({ from: this.state.account })
         .on('transactionHash', (hash) => {
@@ -110,7 +110,7 @@ class App extends Component {
   tipUser = async (id, tipAmount) => {
     this.setState({ loading: true });
 
-    this.state.decentragram.methods
+    this.state.pixishare.methods
     .tipUser(id)
     .send({ from: this.state.account, value: tipAmount })
     .on('transactionHash', (hash) => {
@@ -122,7 +122,7 @@ class App extends Component {
     super(props)
     this.state = {
       account: '',
-      decentragram: null,
+      PixiShare: null,
       posts: [],
       loading: true
     }

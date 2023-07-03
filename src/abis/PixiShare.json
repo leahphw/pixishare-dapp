@@ -1,5 +1,5 @@
 {
-  "contractName": "Decentragram",
+  "contractName": "PixiShare",
   "abi": [
     {
       "anonymous": false,
@@ -182,17 +182,17 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"hash\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tipAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address payable\",\"name\":\"author\",\"type\":\"address\"}],\"name\":\"PostTipped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"hash\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tipAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address payable\",\"name\":\"author\",\"type\":\"address\"}],\"name\":\"PostUploaded\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"postCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"posts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"hash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"tipAmount\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"author\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"tipUser\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_postHash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description\",\"type\":\"string\"}],\"name\":\"upload\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/phuonganhle/Documents/projects/dapp/src/contracts/Decentragram.sol\":\"Decentragram\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/phuonganhle/Documents/projects/dapp/src/contracts/Decentragram.sol\":{\"keccak256\":\"0xf53c08099048ad7856a3bd1072ffb7eb75da233af891065de939348f56136c69\",\"urls\":[\"bzz-raw://e31da81f034c656b510d2fb3e00adafe834b01f54c7ebb1b08019ad699940a41\",\"dweb:/ipfs/QmYgnnrhS5ZPHMzo6iVs8fmagQs6KQRfq1J2gWybqUqnyZ\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"hash\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tipAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address payable\",\"name\":\"author\",\"type\":\"address\"}],\"name\":\"PostTipped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"hash\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tipAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address payable\",\"name\":\"author\",\"type\":\"address\"}],\"name\":\"PostUploaded\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"postCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"posts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"hash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"tipAmount\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"author\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"tipUser\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_postHash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description\",\"type\":\"string\"}],\"name\":\"upload\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/phuonganhle/Documents/projects/dapp/src/contracts/PixiShare.sol\":\"PixiShare\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/phuonganhle/Documents/projects/dapp/src/contracts/PixiShare.sol\":{\"keccak256\":\"0xf53c08099048ad7856a3bd1072ffb7eb75da233af891065de939348f56136c69\",\"urls\":[\"bzz-raw://e31da81f034c656b510d2fb3e00adafe834b01f54c7ebb1b08019ad699940a41\",\"dweb:/ipfs/QmYgnnrhS5ZPHMzo6iVs8fmagQs6KQRfq1J2gWybqUqnyZ\"]}},\"version\":1}",
   "bytecode": "0x60806040526040518060400160405280600c81526020017f446563656e7472616772616d00000000000000000000000000000000000000008152506000908051906020019061004f929190610067565b50600060025534801561006157600080fd5b5061010c565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a857805160ff19168380011785556100d6565b828001600101855582156100d6579182015b828111156100d55782518255916020019190600101906100ba565b5b5090506100e391906100e7565b5090565b61010991905b808211156101055760008160009055506001016100ed565b5090565b90565b610e458061011b6000396000f3fe60806040526004361061004a5760003560e01c806306fdde031461004f5780630b1e7f83146100df57806317906c2e14610240578063202e49361461026b578063d1d8a068146103ca575b600080fd5b34801561005b57600080fd5b506100646103f8565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a4578082015181840152602081019050610089565b50505050905090810190601f1680156100d15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100eb57600080fd5b506101186004803603602081101561010257600080fd5b8101908080359060200190929190505050610496565b6040518086815260200180602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838103835287818151815260200191508051906020019080838360005b8381101561019a57808201518184015260208101905061017f565b50505050905090810190601f1680156101c75780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b838110156102005780820151818401526020810190506101e5565b50505050905090810190601f16801561022d5780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b34801561024c57600080fd5b5061025561061c565b6040518082815260200191505060405180910390f35b34801561027757600080fd5b506103c86004803603604081101561028e57600080fd5b81019080803590602001906401000000008111156102ab57600080fd5b8201836020820111156102bd57600080fd5b803590602001918460018302840111640100000000831117156102df57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561034257600080fd5b82018360208201111561035457600080fd5b8035906020019184600183028401116401000000008311171561037657600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610622565b005b6103f6600480360360208110156103e057600080fd5b81019080803590602001909291905050506108cb565b005b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561048e5780601f106104635761010080835404028352916020019161048e565b820191906000526020600020905b81548152906001019060200180831161047157829003601f168201915b505050505081565b6001602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105485780601f1061051d57610100808354040283529160200191610548565b820191906000526020600020905b81548152906001019060200180831161052b57829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105e65780601f106105bb576101008083540402835291602001916105e6565b820191906000526020600020905b8154815290600101906020018083116105c957829003601f168201915b5050505050908060030154908060040160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905085565b60025481565b600081511161063057600080fd5b600082511161063e57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561067857600080fd5b6002600081548092919060010191905055506040518060a001604052806002548152602001838152602001828152602001600081526020013373ffffffffffffffffffffffffffffffffffffffff16815250600160006002548152602001908152602001600020600082015181600001556020820151816001019080519060200190610705929190610d26565b506040820151816002019080519060200190610722929190610d26565b506060820151816003015560808201518160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050507f6a9d53ad8dea29ab96bdf3398d301e31a58b0acfdf63b322cbb47b0e1623a59c60025483836000336040518086815260200180602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838103835287818151815260200191508051906020019080838360005b83811015610822578082015181840152602081019050610807565b50505050905090810190601f16801561084f5780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b8381101561088857808201518184015260208101905061086d565b50505050905090810190601f1680156108b55780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390a15050565b6000811180156108dd57506002548111155b6108e657600080fd5b6108ee610da6565b600160008381526020019081526020016000206040518060a001604052908160008201548152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109af5780601f10610984576101008083540402835291602001916109af565b820191906000526020600020905b81548152906001019060200180831161099257829003601f168201915b50505050508152602001600282018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610a515780601f10610a2657610100808354040283529160200191610a51565b820191906000526020600020905b815481529060010190602001808311610a3457829003601f168201915b50505050508152602001600382015481526020016004820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152505090506000816080015190508073ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f19350505050158015610b0b573d6000803e3d6000fd5b50816060015134018260600181815250508160016000858152602001908152602001600020600082015181600001556020820151816001019080519060200190610b56929190610d26565b506040820151816002019080519060200190610b73929190610d26565b506060820151816003015560808201518160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050507f8cdd31fc6bd9c789638fdbd3ed5c788b27fa5d287f300e92f3c436ba03527db383836020015184604001518560600151856040518086815260200180602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838103835287818151815260200191508051906020019080838360005b83811015610c7c578082015181840152602081019050610c61565b50505050905090810190601f168015610ca95780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b83811015610ce2578082015181840152602081019050610cc7565b50505050905090810190601f168015610d0f5780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390a1505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610d6757805160ff1916838001178555610d95565b82800160010185558215610d95579182015b82811115610d94578251825591602001919060010190610d79565b5b509050610da29190610deb565b5090565b6040518060a0016040528060008152602001606081526020016060815260200160008152602001600073ffffffffffffffffffffffffffffffffffffffff1681525090565b610e0d91905b80821115610e09576000816000905550600101610df1565b5090565b9056fea265627a7a723158202cc2e8effd5ab077a8c55e91bddb7b6452789b61402e8cab1bfe452fb799f83e64736f6c63430005100032",
   "deployedBytecode": "0x60806040526004361061004a5760003560e01c806306fdde031461004f5780630b1e7f83146100df57806317906c2e14610240578063202e49361461026b578063d1d8a068146103ca575b600080fd5b34801561005b57600080fd5b506100646103f8565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a4578082015181840152602081019050610089565b50505050905090810190601f1680156100d15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100eb57600080fd5b506101186004803603602081101561010257600080fd5b8101908080359060200190929190505050610496565b6040518086815260200180602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838103835287818151815260200191508051906020019080838360005b8381101561019a57808201518184015260208101905061017f565b50505050905090810190601f1680156101c75780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b838110156102005780820151818401526020810190506101e5565b50505050905090810190601f16801561022d5780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b34801561024c57600080fd5b5061025561061c565b6040518082815260200191505060405180910390f35b34801561027757600080fd5b506103c86004803603604081101561028e57600080fd5b81019080803590602001906401000000008111156102ab57600080fd5b8201836020820111156102bd57600080fd5b803590602001918460018302840111640100000000831117156102df57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561034257600080fd5b82018360208201111561035457600080fd5b8035906020019184600183028401116401000000008311171561037657600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610622565b005b6103f6600480360360208110156103e057600080fd5b81019080803590602001909291905050506108cb565b005b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561048e5780601f106104635761010080835404028352916020019161048e565b820191906000526020600020905b81548152906001019060200180831161047157829003601f168201915b505050505081565b6001602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105485780601f1061051d57610100808354040283529160200191610548565b820191906000526020600020905b81548152906001019060200180831161052b57829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105e65780601f106105bb576101008083540402835291602001916105e6565b820191906000526020600020905b8154815290600101906020018083116105c957829003601f168201915b5050505050908060030154908060040160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905085565b60025481565b600081511161063057600080fd5b600082511161063e57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561067857600080fd5b6002600081548092919060010191905055506040518060a001604052806002548152602001838152602001828152602001600081526020013373ffffffffffffffffffffffffffffffffffffffff16815250600160006002548152602001908152602001600020600082015181600001556020820151816001019080519060200190610705929190610d26565b506040820151816002019080519060200190610722929190610d26565b506060820151816003015560808201518160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050507f6a9d53ad8dea29ab96bdf3398d301e31a58b0acfdf63b322cbb47b0e1623a59c60025483836000336040518086815260200180602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838103835287818151815260200191508051906020019080838360005b83811015610822578082015181840152602081019050610807565b50505050905090810190601f16801561084f5780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b8381101561088857808201518184015260208101905061086d565b50505050905090810190601f1680156108b55780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390a15050565b6000811180156108dd57506002548111155b6108e657600080fd5b6108ee610da6565b600160008381526020019081526020016000206040518060a001604052908160008201548152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109af5780601f10610984576101008083540402835291602001916109af565b820191906000526020600020905b81548152906001019060200180831161099257829003601f168201915b50505050508152602001600282018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610a515780601f10610a2657610100808354040283529160200191610a51565b820191906000526020600020905b815481529060010190602001808311610a3457829003601f168201915b50505050508152602001600382015481526020016004820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152505090506000816080015190508073ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f19350505050158015610b0b573d6000803e3d6000fd5b50816060015134018260600181815250508160016000858152602001908152602001600020600082015181600001556020820151816001019080519060200190610b56929190610d26565b506040820151816002019080519060200190610b73929190610d26565b506060820151816003015560808201518160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050507f8cdd31fc6bd9c789638fdbd3ed5c788b27fa5d287f300e92f3c436ba03527db383836020015184604001518560600151856040518086815260200180602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838103835287818151815260200191508051906020019080838360005b83811015610c7c578082015181840152602081019050610c61565b50505050905090810190601f168015610ca95780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b83811015610ce2578082015181840152602081019050610cc7565b50505050905090810190601f168015610d0f5780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390a1505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610d6757805160ff1916838001178555610d95565b82800160010185558215610d95579182015b82811115610d94578251825591602001919060010190610d79565b5b509050610da29190610deb565b5090565b6040518060a0016040528060008152602001606081526020016060815260200160008152602001600073ffffffffffffffffffffffffffffffffffffffff1681525090565b610e0d91905b80821115610e09576000816000905550600101610df1565b5090565b9056fea265627a7a723158202cc2e8effd5ab077a8c55e91bddb7b6452789b61402e8cab1bfe452fb799f83e64736f6c63430005100032",
   "sourceMap": "25:1543:0:-;;;51:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;549:1;525:25;;25:1543;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:1543:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
   "deployedSourceMap": "25:1543:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;51:35;;8:9:-1;5:2;;;30:1;27;20:12;5:2;51:35:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;51:35:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;487:34;;8:9:-1;5:2;;;30:1;27;20:12;5:2;487:34:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;487:34:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;487:34:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;487:34:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;525:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;525:25:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;573:453;;8:9:-1;5:2;;;30:1;27;20:12;5:2;573:453:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;573:453:0;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;573:453:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;573:453:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;573:453:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;573:453:0;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;573:453:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;573:453:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;573:453:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;573:453:0;;;;;;;;;;;;;;;:::i;:::-;;1045:521;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1045:521:0;;;;;;;;;;;;;;;;;:::i;:::-;;51:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;487:34::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;525:25::-;;;;:::o;573:453::-;716:1;693:12;687:26;:30;679:39;;;;;;758:1;738:9;732:23;:27;724:36;;;;;;796:3;774:26;;:10;:26;;;;766:35;;;;;;831:9;;:11;;;;;;;;;;;;;867:55;;;;;;;;872:9;;867:55;;;;883:9;867:55;;;;894:12;867:55;;;;908:1;867:55;;;;911:10;867:55;;;;;848:5;:16;854:9;;848:16;;;;;;;;;;;:74;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;958:63;971:9;;982;993:12;1007:1;1010:10;958:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;958:63:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;958:63:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;573:453;;:::o;1045:521::-;1131:1;1125:3;:7;:27;;;;;1143:9;;1136:3;:16;;1125:27;1117:36;;;;;;1189:17;;:::i;:::-;1209:5;:10;1215:3;1209:10;;;;;;;;;;;1189:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1225:23;1251:5;:12;;;1225:38;;1304:7;1296:25;;:36;1322:9;1296:36;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1296:36:0;1394:5;:15;;;1382:9;:27;1364:5;:15;;:45;;;;;1448:5;1435;:10;1441:3;1435:10;;;;;;;;;;;:18;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1489:72;1500:3;1505:5;:10;;;1517:5;:17;;;1536:5;:15;;;1553:7;1489:72;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1489:72:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1489:72:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1045:521;;;:::o;25:1543::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.5.0;\n\ncontract Decentragram {\n  string public name = \"Decentragram\";\n\n  // Store posts\n  struct Post {\n    uint id;\n    string hash;\n    string description;\n    uint tipAmount;\n    address payable author;\n  }\n\n  event PostUploaded(\n    uint id,\n    string hash,\n    string description,\n    uint tipAmount,\n    address payable author\n  );\n\n  event PostTipped(\n    uint id,\n    string hash,\n    string description,\n    uint tipAmount,\n    address payable author\n  );\n\n  mapping(uint => Post) public posts;\n  uint public postCount = 0;\n\n  // Create posts\n  function upload(string memory _postHash, string memory _description) public {\n    // Set requirements\n    require(bytes(_description).length > 0);\n    require(bytes(_postHash).length > 0);\n    require(msg.sender != address(0x0));\n\n    // Increment count\n    postCount++;\n    posts[postCount] = Post(postCount, _postHash, _description, 0, msg.sender);\n\n    // Trigger an event\n    emit PostUploaded(postCount, _postHash, _description, 0, msg.sender);\n  }\n\n  // Tip posts\n  function tipUser(uint _id) public payable {\n    // Ser requirements\n    require(_id > 0 && _id <= postCount);\n\n    // Fetch post and author\n    Post memory _post = posts[_id];\n    address payable _author = _post.author;\n\n    // Send ETH to author\n    address(_author).transfer(msg.value);\n\n    // Update tip amount\n    _post.tipAmount = msg.value + _post.tipAmount;\n\n    // Update post\n    posts[_id] = _post;\n\n    // Trigger an event\n    emit PostTipped(_id, _post.hash, _post.description, _post.tipAmount, _author);\n  }\n}",
-  "sourcePath": "/Users/phuonganhle/Documents/projects/dapp/src/contracts/Decentragram.sol",
+  "source": "pragma solidity ^0.5.0;\n\ncontract PixiShare {\n  string public name = \"PixiShare\";\n\n  // Store posts\n  struct Post {\n    uint id;\n    string hash;\n    string description;\n    uint tipAmount;\n    address payable author;\n  }\n\n  event PostUploaded(\n    uint id,\n    string hash,\n    string description,\n    uint tipAmount,\n    address payable author\n  );\n\n  event PostTipped(\n    uint id,\n    string hash,\n    string description,\n    uint tipAmount,\n    address payable author\n  );\n\n  mapping(uint => Post) public posts;\n  uint public postCount = 0;\n\n  // Create posts\n  function upload(string memory _postHash, string memory _description) public {\n    // Set requirements\n    require(bytes(_description).length > 0);\n    require(bytes(_postHash).length > 0);\n    require(msg.sender != address(0x0));\n\n    // Increment count\n    postCount++;\n    posts[postCount] = Post(postCount, _postHash, _description, 0, msg.sender);\n\n    // Trigger an event\n    emit PostUploaded(postCount, _postHash, _description, 0, msg.sender);\n  }\n\n  // Tip posts\n  function tipUser(uint _id) public payable {\n    // Ser requirements\n    require(_id > 0 && _id <= postCount);\n\n    // Fetch post and author\n    Post memory _post = posts[_id];\n    address payable _author = _post.author;\n\n    // Send ETH to author\n    address(_author).transfer(msg.value);\n\n    // Update tip amount\n    _post.tipAmount = msg.value + _post.tipAmount;\n\n    // Update post\n    posts[_id] = _post;\n\n    // Trigger an event\n    emit PostTipped(_id, _post.hash, _post.description, _post.tipAmount, _author);\n  }\n}",
+  "sourcePath": "/Users/phuonganhle/Documents/projects/dapp/src/contracts/PixiShare.sol",
   "ast": {
-    "absolutePath": "/Users/phuonganhle/Documents/projects/dapp/src/contracts/Decentragram.sol",
+    "absolutePath": "/Users/phuonganhle/Documents/projects/dapp/src/contracts/PixiShare.sol",
     "exportedSymbols": {
-      "Decentragram": [
+      "PixiShare": [
         169
       ]
     },
@@ -220,7 +220,7 @@
         "linearizedBaseContracts": [
           169
         ],
-        "name": "Decentragram",
+        "name": "PixiShare",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -260,14 +260,14 @@
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_483de360be352324e6ef7d99538d13af105db358291902b3c5b002f6928fdebc",
-                "typeString": "literal_string \"Decentragram\""
+                "typeString": "literal_string \"PixiShare\""
               },
-              "value": "Decentragram"
+              "value": "PixiShare"
             },
             "visibility": "public"
           },
           {
-            "canonicalName": "Decentragram.Post",
+            "canonicalName": "PixiShare.Post",
             "id": 15,
             "members": [
               {
@@ -721,7 +721,7 @@
             "storageLocation": "default",
             "typeDescriptions": {
               "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$15_storage_$",
-              "typeString": "mapping(uint256 => struct Decentragram.Post)"
+              "typeString": "mapping(uint256 => struct PixiShare.Post)"
             },
             "typeName": {
               "id": 42,
@@ -739,7 +739,7 @@
               "src": "487:21:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$15_storage_$",
-                "typeString": "mapping(uint256 => struct Decentragram.Post)"
+                "typeString": "mapping(uint256 => struct PixiShare.Post)"
               },
               "valueType": {
                 "contractScope": null,
@@ -750,7 +750,7 @@
                 "src": "503:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_Post_$15_storage_ptr",
-                  "typeString": "struct Decentragram.Post"
+                  "typeString": "struct PixiShare.Post"
                 }
               }
             },
@@ -1304,7 +1304,7 @@
                         "src": "848:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$15_storage_$",
-                          "typeString": "mapping(uint256 => struct Decentragram.Post storage ref)"
+                          "typeString": "mapping(uint256 => struct PixiShare.Post storage ref)"
                         }
                       },
                       "id": 85,
@@ -1329,7 +1329,7 @@
                       "src": "848:16:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_storage",
-                        "typeString": "struct Decentragram.Post storage ref"
+                        "typeString": "struct PixiShare.Post storage ref"
                       }
                     },
                     "nodeType": "Assignment",
@@ -1455,7 +1455,7 @@
                         "src": "867:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_struct$_Post_$15_storage_ptr_$",
-                          "typeString": "type(struct Decentragram.Post storage pointer)"
+                          "typeString": "type(struct PixiShare.Post storage pointer)"
                         }
                       },
                       "id": 93,
@@ -1469,13 +1469,13 @@
                       "src": "867:55:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_memory",
-                        "typeString": "struct Decentragram.Post memory"
+                        "typeString": "struct PixiShare.Post memory"
                       }
                     },
                     "src": "848:74:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Post_$15_storage",
-                      "typeString": "struct Decentragram.Post storage ref"
+                      "typeString": "struct PixiShare.Post storage ref"
                     }
                   },
                   "id": 95,
@@ -1885,7 +1885,7 @@
                       "storageLocation": "memory",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                        "typeString": "struct Decentragram.Post"
+                        "typeString": "struct PixiShare.Post"
                       },
                       "typeName": {
                         "contractScope": null,
@@ -1896,7 +1896,7 @@
                         "src": "1189:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Post_$15_storage_ptr",
-                          "typeString": "struct Decentragram.Post"
+                          "typeString": "struct PixiShare.Post"
                         }
                       },
                       "value": null,
@@ -1916,7 +1916,7 @@
                       "src": "1209:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$15_storage_$",
-                        "typeString": "mapping(uint256 => struct Decentragram.Post storage ref)"
+                        "typeString": "mapping(uint256 => struct PixiShare.Post storage ref)"
                       }
                     },
                     "id": 125,
@@ -1941,7 +1941,7 @@
                     "src": "1209:10:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Post_$15_storage",
-                      "typeString": "struct Decentragram.Post storage ref"
+                      "typeString": "struct PixiShare.Post storage ref"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
@@ -1993,7 +1993,7 @@
                       "src": "1251:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                        "typeString": "struct Decentragram.Post memory"
+                        "typeString": "struct PixiShare.Post memory"
                       }
                     },
                     "id": 130,
@@ -2157,7 +2157,7 @@
                         "src": "1364:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                          "typeString": "struct Decentragram.Post memory"
+                          "typeString": "struct PixiShare.Post memory"
                         }
                       },
                       "id": 142,
@@ -2230,7 +2230,7 @@
                           "src": "1394:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                            "typeString": "struct Decentragram.Post memory"
+                            "typeString": "struct PixiShare.Post memory"
                           }
                         },
                         "id": 146,
@@ -2283,7 +2283,7 @@
                         "src": "1435:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$15_storage_$",
-                          "typeString": "mapping(uint256 => struct Decentragram.Post storage ref)"
+                          "typeString": "mapping(uint256 => struct PixiShare.Post storage ref)"
                         }
                       },
                       "id": 152,
@@ -2308,7 +2308,7 @@
                       "src": "1435:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_storage",
-                        "typeString": "struct Decentragram.Post storage ref"
+                        "typeString": "struct PixiShare.Post storage ref"
                       }
                     },
                     "nodeType": "Assignment",
@@ -2323,13 +2323,13 @@
                       "src": "1448:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                        "typeString": "struct Decentragram.Post memory"
+                        "typeString": "struct PixiShare.Post memory"
                       }
                     },
                     "src": "1435:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Post_$15_storage",
-                      "typeString": "struct Decentragram.Post storage ref"
+                      "typeString": "struct PixiShare.Post storage ref"
                     }
                   },
                   "id": 155,
@@ -2365,7 +2365,7 @@
                           "src": "1505:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                            "typeString": "struct Decentragram.Post memory"
+                            "typeString": "struct PixiShare.Post memory"
                           }
                         },
                         "id": 159,
@@ -2394,7 +2394,7 @@
                           "src": "1517:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                            "typeString": "struct Decentragram.Post memory"
+                            "typeString": "struct PixiShare.Post memory"
                           }
                         },
                         "id": 161,
@@ -2423,7 +2423,7 @@
                           "src": "1536:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                            "typeString": "struct Decentragram.Post memory"
+                            "typeString": "struct PixiShare.Post memory"
                           }
                         },
                         "id": 163,
@@ -2568,9 +2568,9 @@
     "src": "0:1568:0"
   },
   "legacyAST": {
-    "absolutePath": "/Users/phuonganhle/Documents/projects/dapp/src/contracts/Decentragram.sol",
+    "absolutePath": "/Users/phuonganhle/Documents/projects/dapp/src/contracts/PixiShare.sol",
     "exportedSymbols": {
-      "Decentragram": [
+      "PixiShare": [
         169
       ]
     },
@@ -2598,7 +2598,7 @@
         "linearizedBaseContracts": [
           169
         ],
-        "name": "Decentragram",
+        "name": "PixiShare",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -2638,14 +2638,14 @@
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_483de360be352324e6ef7d99538d13af105db358291902b3c5b002f6928fdebc",
-                "typeString": "literal_string \"Decentragram\""
+                "typeString": "literal_string \"PixiShare\""
               },
-              "value": "Decentragram"
+              "value": "PixiShare"
             },
             "visibility": "public"
           },
           {
-            "canonicalName": "Decentragram.Post",
+            "canonicalName": "PixiShare.Post",
             "id": 15,
             "members": [
               {
@@ -3099,7 +3099,7 @@
             "storageLocation": "default",
             "typeDescriptions": {
               "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$15_storage_$",
-              "typeString": "mapping(uint256 => struct Decentragram.Post)"
+              "typeString": "mapping(uint256 => struct PixiShare.Post)"
             },
             "typeName": {
               "id": 42,
@@ -3117,7 +3117,7 @@
               "src": "487:21:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$15_storage_$",
-                "typeString": "mapping(uint256 => struct Decentragram.Post)"
+                "typeString": "mapping(uint256 => struct PixiShare.Post)"
               },
               "valueType": {
                 "contractScope": null,
@@ -3128,7 +3128,7 @@
                 "src": "503:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_Post_$15_storage_ptr",
-                  "typeString": "struct Decentragram.Post"
+                  "typeString": "struct PixiShare.Post"
                 }
               }
             },
@@ -3682,7 +3682,7 @@
                         "src": "848:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$15_storage_$",
-                          "typeString": "mapping(uint256 => struct Decentragram.Post storage ref)"
+                          "typeString": "mapping(uint256 => struct PixiShare.Post storage ref)"
                         }
                       },
                       "id": 85,
@@ -3707,7 +3707,7 @@
                       "src": "848:16:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_storage",
-                        "typeString": "struct Decentragram.Post storage ref"
+                        "typeString": "struct PixiShare.Post storage ref"
                       }
                     },
                     "nodeType": "Assignment",
@@ -3833,7 +3833,7 @@
                         "src": "867:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_struct$_Post_$15_storage_ptr_$",
-                          "typeString": "type(struct Decentragram.Post storage pointer)"
+                          "typeString": "type(struct PixiShare.Post storage pointer)"
                         }
                       },
                       "id": 93,
@@ -3847,13 +3847,13 @@
                       "src": "867:55:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_memory",
-                        "typeString": "struct Decentragram.Post memory"
+                        "typeString": "struct PixiShare.Post memory"
                       }
                     },
                     "src": "848:74:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Post_$15_storage",
-                      "typeString": "struct Decentragram.Post storage ref"
+                      "typeString": "struct PixiShare.Post storage ref"
                     }
                   },
                   "id": 95,
@@ -4263,7 +4263,7 @@
                       "storageLocation": "memory",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                        "typeString": "struct Decentragram.Post"
+                        "typeString": "struct PixiShare.Post"
                       },
                       "typeName": {
                         "contractScope": null,
@@ -4274,7 +4274,7 @@
                         "src": "1189:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Post_$15_storage_ptr",
-                          "typeString": "struct Decentragram.Post"
+                          "typeString": "struct PixiShare.Post"
                         }
                       },
                       "value": null,
@@ -4294,7 +4294,7 @@
                       "src": "1209:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$15_storage_$",
-                        "typeString": "mapping(uint256 => struct Decentragram.Post storage ref)"
+                        "typeString": "mapping(uint256 => struct PixiShare.Post storage ref)"
                       }
                     },
                     "id": 125,
@@ -4319,7 +4319,7 @@
                     "src": "1209:10:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Post_$15_storage",
-                      "typeString": "struct Decentragram.Post storage ref"
+                      "typeString": "struct PixiShare.Post storage ref"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
@@ -4371,7 +4371,7 @@
                       "src": "1251:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                        "typeString": "struct Decentragram.Post memory"
+                        "typeString": "struct PixiShare.Post memory"
                       }
                     },
                     "id": 130,
@@ -4535,7 +4535,7 @@
                         "src": "1364:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                          "typeString": "struct Decentragram.Post memory"
+                          "typeString": "struct PixiShare.Post memory"
                         }
                       },
                       "id": 142,
@@ -4608,7 +4608,7 @@
                           "src": "1394:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                            "typeString": "struct Decentragram.Post memory"
+                            "typeString": "struct PixiShare.Post memory"
                           }
                         },
                         "id": 146,
@@ -4661,7 +4661,7 @@
                         "src": "1435:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Post_$15_storage_$",
-                          "typeString": "mapping(uint256 => struct Decentragram.Post storage ref)"
+                          "typeString": "mapping(uint256 => struct PixiShare.Post storage ref)"
                         }
                       },
                       "id": 152,
@@ -4686,7 +4686,7 @@
                       "src": "1435:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_storage",
-                        "typeString": "struct Decentragram.Post storage ref"
+                        "typeString": "struct PixiShare.Post storage ref"
                       }
                     },
                     "nodeType": "Assignment",
@@ -4701,13 +4701,13 @@
                       "src": "1448:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                        "typeString": "struct Decentragram.Post memory"
+                        "typeString": "struct PixiShare.Post memory"
                       }
                     },
                     "src": "1435:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Post_$15_storage",
-                      "typeString": "struct Decentragram.Post storage ref"
+                      "typeString": "struct PixiShare.Post storage ref"
                     }
                   },
                   "id": 155,
@@ -4743,7 +4743,7 @@
                           "src": "1505:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                            "typeString": "struct Decentragram.Post memory"
+                            "typeString": "struct PixiShare.Post memory"
                           }
                         },
                         "id": 159,
@@ -4772,7 +4772,7 @@
                           "src": "1517:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                            "typeString": "struct Decentragram.Post memory"
+                            "typeString": "struct PixiShare.Post memory"
                           }
                         },
                         "id": 161,
@@ -4801,7 +4801,7 @@
                           "src": "1536:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Post_$15_memory_ptr",
-                            "typeString": "struct Decentragram.Post memory"
+                            "typeString": "struct PixiShare.Post memory"
                           }
                         },
                         "id": 163,
