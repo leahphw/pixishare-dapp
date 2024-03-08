@@ -1,8 +1,8 @@
-# PixiShare
+# pixi share ( ๑‾̀◡‾́)σ"
 
-This decentralized application (dApp) enables users to share pictures and engage in a censorship-resistant social media platform. It leverages the Ethereum blockchain and smart contracts written in Solidity for transparency and security. The backend is built with Node.js, while the user interface is developed using React and Bootstrap.
+I created this DApp out of curiosity about how a decentralized app would work :) It is essentially an image-sharing platform with the Ethereum blockchain as the data storage place and allows for user tokenization ( ͡° ͜ʖ ͡° )
 
-By utilizing blockchain technology, the app offers users ownership and control over their data, while countering algorithmic content filtering. It provides a decentralized and transparent platform for sharing news, media, and personal moments.
+The idea behind using blockchain technology for social media is that it offers users ownership and control over their data while countering algorithmic content filtering. It provides a decentralized and transparent platform for sharing news media and opinions :).
 
 ## Project Demo
  
@@ -18,28 +18,15 @@ By utilizing blockchain technology, the app offers users ownership and control o
 - [x] Ownership and control over user data
 - [x] Censorship-resistant social media experience
 
-## Prerequisites
-Before running the application, make sure you have the following installed:
-- [ ] Node.js
-- [ ] [Metamask browser extension](https://metamask.io/) (or other equivalent wallets)
-
-## Getting Started
-- [ ] Clone the repository
-- [ ] Install dependencies: `npm install`
-- [ ] Configure Metamask with your Ethereum account
-- [ ] Deploy the smart contracts to the Ethereum network `truffle migrate --reset`
-- [ ] Start the application: `npm start`
-- [ ] Access the application in your browser at http://localhost:3000
-
-## Technologies Used
+## Tech Used
 - [x] Ethereum blockchain
 - [x] Solidity smart contracts
 - [x] Node.js
 - [x] React
-- [x] Bootstrap
+- [x] Bootstrap for CSS
 - [x] IPFS (InterPlanetary File System)
 
 ## Acknowledgments
-[Dapp University](https://www.dappuniversity.com/) for the tutorial and inspiration
+[Dapp University](https://www.dappuniversity.com/) for the tutorial and inspiration ٩꒰ʘʚʘ๑꒱۶
 
 
